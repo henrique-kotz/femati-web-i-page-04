@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --light-background: #fff;
+    --text-grey: rgba(0, 0, 0, 0.7);
+    --title-blue: #252EFF;
+    --purple-light: #6066FF;
+
+    --dark-background: #121212;
+    --text-white: rgba(255, 255, 255, 0.7);
+    --title-white: #fff;
+    --purple-dark: #BB86FC;
+}
+
+
+body {
+    background-color: var(--light-background);
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--title-blue);
+
+    margin-bottom: 70px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    margin-bottom: 18px;
+}
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+form input {
+    width: 360px;
+    height: 40px;
+    border: 2px solid var(--purple-light);
+    border-radius: 10px;
+    padding: 10px;
+}
+form input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-grey);
+}
+form button {
+    background-color: var(--title-blue);
+    color: var(--title-white);
+}
+
+button, a {
+    width: 360px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--purple-light);
+    color: var(--title-white);
+}
+button:hover {
+    cursor: pointer;
+}
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-background);
+    }
+    h2 {
+        color: var(--title-white);
+    }
+    form input {
+        border-color: var(--purple-dark);
+        background-color: var(--dark-background);
+    }
+    form input::placeholder {
+        color: var(--text-white);
+    }
+    form button {
+        background-color: var(--purple-dark);
+        border: none;
+    }
+    button {
+        background-color: var(--dark-background);
+        border: 2px solid var(--title-white);
+    }
+}
